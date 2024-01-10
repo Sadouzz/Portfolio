@@ -1,0 +1,284 @@
+:root{
+    --jaune: #FAB440;
+    --violet: #4E47C6;
+    --noirbleu: #07143F;
+}
+
+body {
+    font-family: "Poppins";
+    margin: 0;
+}
+
+h1{
+    font-size: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#back {
+    background: linear-gradient(to left, var(--violet), var(--noirbleu));
+    background-size: cover;
+    height: 100vh;
+
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    color: aliceblue;
+    display: grid;
+    flex-direction: column;
+    background-color: #040404;
+}
+
+#present {
+    margin-left: 5%;
+    position: relative;
+    top: 300px;
+
+}
+
+.row {
+    display: flex;
+}
+
+#more {
+    position: relative;
+    background-color: #040404;
+    height: 100vh;
+}
+
+
+#more h2{
+    margin: 0;
+    font-size: 30px;
+}
+
+span {
+    border-bottom: solid;
+    border-color: var(--jaune);
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+#present li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+#present .socials a {
+    background: var(--noirbleu);
+    padding: 15px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#present .socials a:hover {
+    background: var(--violet);
+    padding: 15px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.socials {
+    margin-top: 30px;
+}
+
+.socials i {
+    color: var(--jaune);
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    transition: 1s;
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+}
+
+nav  a:hover{
+    color: var(--jaune);
+}
+
+nav a::before{
+    width: 0;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: 50%;
+    justify-content: space-around;
+    align-items: center;
+    height: 1px;
+    z-index: -1;
+    transition: .5s;
+    border-color: var(--jaune);
+    border-bottom: solid;
+}
+
+nav a:hover::before {
+    left: 0;
+    right: 0;
+    color: var(--jaune);
+    width: 100%;
+}
+
+.home {
+    border-bottom: solid;
+    border-color: var(--jaune);
+}
+
+.about ul {
+    position: absolute;
+    list-style: none;
+    bottom: 10%;
+    margin-left: 5%;
+}
+
+.about ul li {
+    margin-right: 5px;
+    backdrop-filter: blur(11.8px);
+}
+
+.about ul li .bouton-more {
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 20px;
+    margin-right: 5px;
+    backdrop-filter: blur(11.8px);
+    color: var(--jaune);
+    border-color: var(--jaune);
+    border-style: solid;
+    transition: .5s;
+}
+
+.about ul li .bouton-more:hover{
+    color: var(--noirbleu);
+    background-color: var(--jaune);
+    transition: .5s;
+}
+
+.about ul li .bouton-contact {
+    text-decoration: none;
+    background-color: var(--jaune);
+    border-radius: 16px;
+    padding: 20px;
+    margin-right: 5px;
+    backdrop-filter: blur(11.8px);
+    color: var(--noirbleu);
+    border-style: solid;
+    border-color: var(--jaune);
+}
+
+.about2{
+    margin: 4% 5%;
+}
+
+.about2 ul li a {
+    text-decoration: none;
+    background: rgba(0, 28, 57, 0.9);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(11.8px);
+    color: var(--jaune);
+}
+
+.learn-about-me .row h2 {
+    color: var(--jaune);
+}
+
+.section-title h2::after{
+    width: 120px;
+    content: "";
+    height: 1px;
+    display: inline-block;
+    margin: 4px 10px;
+    background-color: var(--jaune);
+}
+
+.learn-about-me{
+    background: var(--noirbleu);
+    margin: 0 5%;
+    padding: 20px;
+}
+
+.learn-about-me .img {
+    background: rgba(0, 28, 57, 0.9);
+    margin: 0 5%;
+}
+
+.learn-about-me .row img {
+    width: 100%;
+}
+
+.learn-about-me .row .col1 {
+    width: 33%;
+    margin-right: 1%;
+}
+
+.learn-about-me .row .col2 {
+    width: 66%;
+}
+
+.learn-about-me li {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.learn-about-me .row ul {
+    padding: 0;
+}
+
+.learn-about-me .row li i {
+    color: var(--jaune);
+    margin-right: 5px;
+}
+
+.learn-about-me .col2 .row {
+    justify-content: space-between;
+}
+
+.livraison {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.livraison ul {
+    justify-content: space-evenly;
+}
+
+.livraison ul li {
+    background: var(--violet);
+    font-size: 20px;
+    width: 20%;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.livraison ul li span {
+    font-size: 40px;
+}
+
+.livraison ul li i {
+    top: -25%;
+    position: relative;
+    font-size: 40px;
+}
