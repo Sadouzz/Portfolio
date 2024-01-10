@@ -4,6 +4,10 @@
     --noirbleu: #07143F;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins";
     color: aliceblue;
@@ -56,7 +60,7 @@ header {
 
 span {
     border-bottom: solid;
-    border-color: #40E0D0;
+    border-color: var(--jaune);
 }
 
 li {
@@ -178,7 +182,7 @@ nav {
 
 .wrapper .details:hover {
     position: absolute;
-    height: 70%;
+    height: 75%;
     transition: .5s;
 }
 
@@ -222,6 +226,54 @@ nav {
 
 .card .rating {
     margin-top: 20px;
+}
+
+.projects{
+    margin-top: 100px;
+}
+
+.project{
+    display: flex;
+    background-color: var(--violet);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.project .poster{
+    width: 100%;
+    position: relative;
+}
+
+.project .poster img{
+    width: 100%;
+}
+
+.project .text{
+    padding: 0px 20px 20px 20px;
+}
+
+.project h2{
+    margin: 0 0 10px 0;
+}
+
+.project .text ul{
+    margin: 30px;
+    padding: 0;
+}
+
+.project .text ul li a{
+    padding: 20px;
+    background-color: var(--jaune);
+    border-radius: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+.project .text ul li a:hover{
+    background-color: var(--noirbleu);
+    color: var(--jaune);
+    transition: 0.5s;
 }
 
 @keyframes slidein {
@@ -288,5 +340,9 @@ nav {
 
     .header-contain h1{
         position: relative;
+    }
+
+    .project{
+        display: block;
     }
 }
