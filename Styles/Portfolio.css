@@ -4,15 +4,25 @@
     --noirbleu: #07143F;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: "Poppins";
     color: aliceblue;
-    background: linear-gradient(to right, var(--violet), var(--noirbleu));
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("../Images/pexels-christina-morillo-1181676.png") top right no-repeat;
     background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
 }
 
 header {
@@ -26,7 +36,7 @@ header {
     opacity: 0.9;
 }
 
-.container{
+.container {
     margin-bottom: 150px;
 }
 
@@ -73,7 +83,7 @@ ul {
     justify-content: space-evenly;
 }
 
-#btn-menu{
+#btn-menu {
     display: none;
 }
 
@@ -228,49 +238,52 @@ nav {
     margin-top: 20px;
 }
 
-.projects{
+.projects {
     margin-top: 100px;
 }
 
-.project{
+.project {
     display: flex;
     background-color: var(--violet);
     padding: 20px;
     margin: 20px 0;
 }
 
-.project .poster{
+.project .poster {
     width: 100%;
     position: relative;
 }
 
-.project .poster img{
+.project .poster img {
     width: 100%;
 }
 
-.project .text{
+.project .text {
     padding: 0px 20px 20px 20px;
 }
 
-.project h2{
+.project h2 {
     margin: 0 0 10px 0;
 }
 
-.project .text ul{
+.project .text ul {
     margin: 30px;
     padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-.project .text ul li a{
-    padding: 20px;
+.project .text ul li a {
+    padding: 10px;
     background-color: var(--jaune);
     border-radius: 10px;
     text-decoration: none;
     color: aliceblue;
     transition: 0.5s;
+    margin-right: 10px;
 }
 
-.project .text ul li a:hover{
+.project .text ul li a:hover {
     background-color: var(--noirbleu);
     color: var(--jaune);
     transition: 0.5s;
@@ -297,7 +310,7 @@ nav {
         gap: 100%;
         flex-wrap: wrap;
     }
-    
+
     .card {
         position: relative;
         width: 75%;
@@ -305,7 +318,7 @@ nav {
         margin-bottom: 2%;
     }
 
-    .header-contain nav ul{
+    .header-contain nav ul {
         position: absolute;
         flex-direction: column;
         margin-left: 10%;
@@ -316,33 +329,47 @@ nav {
         opacity: 0.9;
     }
 
-    nav ul li{
+    nav ul li {
         transition: 0.5s;
         margin: 20px 0;
+        max-width: 75px;
     }
 
-    #btn-menu{
+    #btn-menu {
         position: absolute;
         display: block;
         right: 10%;
     }
 
-    .menu-hiding a{
+    .menu-hiding a {
         text-decoration: none;
         color: aliceblue;
     }
 
-    .menu-hiding:hover nav ul{
+    .menu-hiding:hover nav ul {
         margin-left: -20%;
         justify-content: none;
         transition: 0.5s;
     }
 
-    .header-contain h1{
+    .header-contain h1 {
         position: relative;
     }
 
-    .project{
+    .project {
         display: block;
+    }
+
+    .project .text ul {
+        margin: 30px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project .text ul li {
+        margin-bottom: 30px;
     }
 }

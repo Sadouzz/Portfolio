@@ -1,4 +1,4 @@
-:root{
+:root {
     --jaune: #FAB440;
     --violet: #4E47C6;
     --noirbleu: #07143F;
@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-h1{
+h1 {
     font-size: 50px;
 }
 
@@ -18,10 +18,9 @@ html {
 }
 
 #back {
-    background: linear-gradient(to left, var(--violet), var(--noirbleu));
+    background: #040404 url("../Images/pexels-christina-morillo-1181676.png") top right no-repeat;
     background-size: cover;
     height: 100vh;
-
 }
 
 ul {
@@ -39,8 +38,7 @@ ul {
 #present {
     margin-left: 5%;
     position: relative;
-    top: 300px;
-
+    top: 30%;
 }
 
 .row {
@@ -49,12 +47,10 @@ ul {
 
 #more {
     position: relative;
-    background-color: #040404;
-    height: 100vh;
+    background: rgba(0, 28, 57, 0.9);
 }
 
-
-#more h2{
+#more h2 {
     margin: 0;
     font-size: 30px;
 }
@@ -111,11 +107,11 @@ nav a {
     z-index: 1;
 }
 
-nav  a:hover{
+nav a:hover {
     color: var(--jaune);
 }
 
-nav a::before{
+nav a::before {
     width: 0;
     content: '';
     position: absolute;
@@ -143,11 +139,9 @@ nav a:hover::before {
     border-color: var(--jaune);
 }
 
-.about ul {
-    position: absolute;
+.about {
+    margin-top: 100px;
     list-style: none;
-    bottom: 10%;
-    margin-left: 5%;
 }
 
 .about ul li {
@@ -167,7 +161,7 @@ nav a:hover::before {
     transition: .5s;
 }
 
-.about ul li .bouton-more:hover{
+.about ul li .bouton-more:hover {
     color: var(--noirbleu);
     background-color: var(--jaune);
     transition: .5s;
@@ -183,17 +177,26 @@ nav a:hover::before {
     color: var(--noirbleu);
     border-style: solid;
     border-color: var(--jaune);
+    transition: .5s;
 }
 
-.about2{
-    margin: 4% 5%;
+.about ul li .bouton-contact:hover {
+    color: var(--jaune);
+    background-color: var(--noirbleu);
+    border-color: var(--noirbleu);
+    transition: .5s;
+}
+
+.about2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .about2 ul li a {
     text-decoration: none;
-    background: rgba(0, 28, 57, 0.9);
     border-radius: 16px;
-    padding: 20px;
+    padding: 10px;
     backdrop-filter: blur(11.8px);
     color: var(--jaune);
 }
@@ -202,7 +205,7 @@ nav a:hover::before {
     color: var(--jaune);
 }
 
-.section-title h2::after{
+.section-title h2::after {
     width: 120px;
     content: "";
     height: 1px;
@@ -211,7 +214,7 @@ nav a:hover::before {
     background-color: var(--jaune);
 }
 
-.learn-about-me{
+.learn-about-me {
     background: var(--noirbleu);
     margin: 0 5%;
     padding: 20px;
@@ -229,6 +232,9 @@ nav a:hover::before {
 .learn-about-me .row .col1 {
     width: 33%;
     margin-right: 1%;
+    max-height: 450px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 .learn-about-me .row .col2 {
@@ -255,22 +261,34 @@ nav a:hover::before {
 }
 
 .livraison {
-    width: 100%;
     margin-top: 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .livraison ul {
-    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .livraison ul li {
     background: var(--violet);
     font-size: 20px;
-    width: 20%;
+    width: 200px;
     height: 170px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    border-radius: 18px;
+    margin-bottom: 3%;
 }
 
 .livraison ul li span {
@@ -281,4 +299,38 @@ nav a:hover::before {
     top: -25%;
     position: relative;
     font-size: 40px;
+}
+
+@media screen and (max-width: 1015px) {
+    #learn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #learn .col1 {
+        width: 70%;
+        height: auto;
+    }
+
+    #learn .col2 {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        justify-content: center;
+        align-content: center;
+        display: flex;
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .row li {
+        margin-bottom: 80px;
+    }
 }

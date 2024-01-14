@@ -3,7 +3,7 @@
     --violet: #4E47C6;
     --noirbleu: #07143F;
     --marron: #751172;
-    --j : #211233;
+    --j: #211233;
     --b: #184b8c;
     --g: #554971;
     --t: #5c1041;
@@ -14,8 +14,18 @@
 body {
     font-family: "Poppins";
     color: aliceblue;
-    background: linear-gradient(to right, var(--violet), var(--noirbleu));
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("../Images/pexels-christina-morillo-1181676.png") top right no-repeat;
     background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
 }
 
 header {
@@ -29,7 +39,7 @@ header {
     opacity: 0.9;
 }
 
-.container{
+.container {
     margin-bottom: 150px;
 }
 
@@ -76,7 +86,7 @@ ul {
     justify-content: space-evenly;
 }
 
-#btn-menu{
+#btn-menu {
     display: none;
 }
 
@@ -140,11 +150,6 @@ nav {
     color: aliceblue;
 }
 
-p {
-    animation-duration: 1s;
-    animation-name: slidein;
-}
-
 .section-title h4::after {
     width: 120px;
     content: "";
@@ -168,6 +173,7 @@ p {
 .wrapper .start {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: 14%;
     width: 100%;
     display: flex;
@@ -223,7 +229,7 @@ p {
     background-color: var(--violet);
 }
 
-.card .details .poster{
+.card .details .poster {
     position: relative;
     top: 90%;
     display: flex;
@@ -232,7 +238,7 @@ p {
     align-items: center;
 }
 
-.card .details .text{
+.card .details .text {
     font-size: 20px;
     margin-top: 10px;
     text-align: center;
@@ -240,13 +246,13 @@ p {
     top: 50%;
 }
 
-.card .details .sub-text{
+.card .details .sub-text {
     font-size: 15px;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.card .details i{
+.card .details i {
     font-size: 150px;
 }
 
@@ -291,7 +297,7 @@ p {
     background-color: var(--violet);
 }
 
-.card-compe .details .poster{
+.card-compe .details .poster {
     position: absolute;
     top: 40%;
     display: flex;
@@ -300,7 +306,7 @@ p {
     align-items: center;
 }
 
-.card-compe .details .text{
+.card-compe .details .text {
     font-size: 25px;
     margin-top: 5px;
     text-align: center;
@@ -309,7 +315,7 @@ p {
     top: 60%;
 }
 
-.card-compe  .start .sub-text{
+.card-compe .start .sub-text {
     font-size: 25px;
     text-align: center;
     width: 100%;
@@ -318,26 +324,66 @@ p {
     color: var(--jaune);
 }
 
-.card-compe .details i{
+.card-compe .details i {
     font-size: 100px;
 }
 
-.card-compe .start .slider{
+.card-compe .start .slider {
     height: 100%;
-    width: 80%;
     background-color: var(--marron);
     left: 0;
     position: absolute;
 }
 
-@keyframes slidein {
-    from {
-        margin-top: 100%;
-    }
+.card-compe .start #html {
+    width: 96%;
+}
 
-    to {
-        margin-top: 0%;
-    }
+.card-compe .start #css {
+    width: 65%;
+}
+
+.card-compe .start #js {
+    width: 72%;
+}
+
+.card-compe .start #python {
+    width: 87%;
+}
+
+.card-compe .start #java {
+    width: 68%;
+}
+
+.card-compe .start #php {
+    width: 63%;
+}
+
+#temoins .card .details .poster {
+    top: 20px;
+    max-height: 200px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#temoins .card .details .text {
+    top: 0px;
+    max-height: 200px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#temoins .card .details .sub-text {
+    top: 0px;
+    max-height: 200px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1015px) {
@@ -351,7 +397,7 @@ p {
         gap: 100%;
         flex-wrap: wrap;
     }
-    
+
     .card {
         position: relative;
         width: 75%;
@@ -370,7 +416,7 @@ p {
         margin-bottom: 3%;
     }
 
-    .header-contain nav ul{
+    .header-contain nav ul {
         position: absolute;
         flex-direction: column;
         margin-left: 10%;
@@ -381,29 +427,30 @@ p {
         opacity: 0.9;
     }
 
-    nav ul li{
+    nav ul li {
         transition: 0.5s;
         margin: 20px 0;
+        max-width: 120px;
     }
 
-    #btn-menu{
+    #btn-menu {
         position: absolute;
         display: block;
         right: 10%;
     }
 
-    .menu-hiding a{
+    .menu-hiding a {
         text-decoration: none;
         color: aliceblue;
     }
 
-    .menu-hiding:hover nav ul{
+    .menu-hiding:hover nav ul {
         margin-left: -20%;
         justify-content: none;
         transition: 0.5s;
     }
 
-    .header-contain h1{
+    .header-contain h1 {
         position: relative;
     }
 }
