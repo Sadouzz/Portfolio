@@ -12,7 +12,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-    background: #040404 url("../Images/pexels-christina-morillo-1181676.png") top right no-repeat;
+    background: #040404 url("../Images/BG.jpg") top right no-repeat;
     background-size: cover;
     left: 0;
     right: 0;
@@ -136,16 +136,23 @@ nav {
     margin-left: 10%;
     opacity: 0.9;
     padding: 2% 5%;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+    }
+
+    to {
+        margin-top: 0%;
+    }
 }
 
 .article h3,
 .article .corps {
     color: aliceblue;
-}
-
-p {
-    animation-duration: 1s;
-    animation-name: slidein;
 }
 
 .section-title h4::after {
@@ -302,16 +309,6 @@ p {
     transition: 0.5s;
 }
 
-@keyframes slidein {
-    from {
-        margin-top: 100%;
-    }
-
-    to {
-        margin-top: 0%;
-    }
-}
-
 @media screen and (max-width: 1015px) {
     .wrapper {
         position: relative;
@@ -347,7 +344,7 @@ p {
     nav ul li {
         transition: 0.5s;
         margin: 20px 0;
-        max-width: 75px;
+        max-width: 65px;
     }
 
     #btn-menu {

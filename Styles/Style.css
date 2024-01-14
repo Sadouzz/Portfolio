@@ -18,7 +18,7 @@ html {
 }
 
 #back {
-    background: #040404 url("../Images/pexels-christina-morillo-1181676.png") top right no-repeat;
+    background: #040404 url("../Images/BG.jpg") top right no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -39,6 +39,11 @@ ul {
     margin-left: 5%;
     position: relative;
     top: 30%;
+}
+
+#present h2{
+    max-width: 700px;
+    line-height: 2;
 }
 
 .row {
