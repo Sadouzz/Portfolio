@@ -41,7 +41,7 @@ ul {
     top: 30%;
 }
 
-#present h2{
+#present h2 {
     max-width: 700px;
     line-height: 2;
 }
@@ -324,7 +324,25 @@ nav a:hover::before {
     }
 }
 
+@media screen and (max-width: 650px) {
+    #present {
+        top: 10%;
+    }
+
+    #present h1 {
+        margin-bottom: 20%;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    #present {
+        top: 0%;
+    }
+
+    #present h1 {
+        margin-bottom: 40%;
+    }
+
     .about {
         justify-content: center;
         align-content: center;

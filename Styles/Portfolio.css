@@ -204,7 +204,7 @@ nav {
 
 .wrapper .details:hover {
     position: absolute;
-    height: 75%;
+    height: 70%;
     transition: .5s;
 }
 
